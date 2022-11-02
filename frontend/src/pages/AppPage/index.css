@@ -1,0 +1,30 @@
+@import '~antd/dist/antd.css';
+ 
+.all{
+  height: 1200px;
+  width:100%;
+  background-color: #d4edf4;
+}
+
+.title{
+  height: 100px;
+  width: 100%;
+  position: relative;
+  background-color: #ceefe4;
+}
+
+.title_text{
+  font-weight: bold;
+  text-align:center;
+  position: relative;
+  top: 20px;
+}
+
+.body_container{
+  height: 1100px;
+  width: 800px;
+  position: relative;
+  left: 450px;
+  background-color: #FFFFF2;
+  box-shadow:0 0 5px #a1a1a1;
+}
