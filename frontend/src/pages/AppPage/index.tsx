@@ -34,6 +34,7 @@ const AppPage = () =>{
       VoteCount: '666'
   }])//提案列表
   
+  /*表格样式*/
   const columns = [
     {
       title: '编号',
@@ -74,15 +75,15 @@ const AppPage = () =>{
       render:(row: any,_: any)=>(
         <Space size="middle">
           <Button onClick={()=>voteEvent1(row,1)}>同意</Button>
-          <Button>不同意</Button>
+          <Button onClick={()=>voteEvent1(row,2)}>不同意</Button>
         </Space>
       )
     }
   ];
   
-  let flag=0;
+  let flag=0;/*确保不多次获取列表导致多个相同值*/
 
-  
+  /*投票事件*/
   const voteEvent1 = async (row: any,opinion: number)=>{
     if(account === '') {
       alert('钱包尚未连接')
@@ -270,8 +271,8 @@ const AppPage = () =>{
   const resetvlaue = async () => {
     setInput_name('');
     setInput_text('');
-    console.log(propoNumber)
-    console.log(all_data)
+    /*console.log(propoNumber)
+    console.log(all_data)*/
   }
 
     return (
